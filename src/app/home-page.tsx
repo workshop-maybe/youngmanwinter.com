@@ -126,7 +126,7 @@ export default function Home() {
                 className="group relative overflow-hidden rounded-xl"
               >
                 <h2 className="text-yellow-400/90 text-xl font-bold mb-5 text-center uppercase tracking-[0.2em]">
-                  Latest Single — Out Now
+                  New Single — Out Now
                 </h2>
                 <div className="relative transform transition-transform duration-700 group-hover:scale-[1.03]">
                   <div className="absolute -inset-1 bg-gradient-to-b from-yellow-500/10 via-transparent to-blue-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
@@ -174,7 +174,7 @@ export default function Home() {
                 className="group relative overflow-hidden rounded-xl"
               >
                 <h2 className="text-yellow-400/90 text-xl font-bold mb-5 text-center uppercase tracking-[0.2em]">
-                  Leading Light EP Out Now
+                  Leading Light EP
                 </h2>
                 <div className="relative transform transition-transform duration-700 group-hover:scale-[1.03]">
                   <div className="absolute -inset-1 bg-gradient-to-b from-yellow-500/10 via-transparent to-blue-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
@@ -318,7 +318,7 @@ export default function Home() {
             }}
           >
             <h2 className="section-heading text-5xl text-center font-bold pb-10 text-white mx-auto block w-fit">
-              Debut Album Out Now
+              Debut Album
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <motion.div
