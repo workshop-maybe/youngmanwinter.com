@@ -1,12 +1,12 @@
 export const upcoming = [
   {
-    date: "Fri. 03.21.25",
+    date: "Sat. 03.21.26",
     venue: "Husky's Pub",
     city: "Worcester, MA",
   },
   {
-    date: "Thu. 05.01.25",
+    date: "Fri. 05.01.26",
     venue: "Tacklebox Brewery",
-    city: "Worcester, MA",
+    city: "Marlborough, MA",
   },
 ];
