@@ -116,6 +116,54 @@ export default function Home() {
               </div>
             </motion.div>
 
+            {/* Latest Single */}
+            <motion.div
+              variants={staggerContainer}
+              className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24 max-w-4xl mx-auto"
+            >
+              <motion.div
+                variants={fadeIn}
+                className="group relative overflow-hidden rounded-xl"
+              >
+                <h2 className="text-yellow-400/90 text-xl font-bold mb-5 text-center uppercase tracking-[0.2em]">
+                  Latest Single — Out Now
+                </h2>
+                <div className="relative transform transition-transform duration-700 group-hover:scale-[1.03]">
+                  <div className="absolute -inset-1 bg-gradient-to-b from-yellow-500/10 via-transparent to-blue-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+                  <Image
+                    src="/crabapple.png"
+                    width={400}
+                    height={400}
+                    alt="Crabapple - Latest Single"
+                    className="relative rounded-xl shadow-2xl"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={fadeIn}
+                className="flex flex-col justify-center items-center gap-6"
+              >
+                <h3 className="text-white text-3xl font-bold tracking-tight">Crabapple</h3>
+                <div className="flex flex-col gap-4 w-full max-w-xs">
+                  <a
+                    href="https://open.spotify.com/album/3LjgX2uSzdyuJ3GSChJNUm?si=wtLNIOj4TlGPsZ58F5Kk3g"
+                    className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white rounded-xl px-6 py-4 transition-all duration-300 border border-white/10 hover:border-white/20"
+                  >
+                    <FaSpotify size={24} className="text-green-400" />
+                    <span className="font-bold tracking-wide">Listen on Spotify</span>
+                  </a>
+                  <a
+                    href="https://music.apple.com/us/album/crabapple-single/1856140622"
+                    className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white rounded-xl px-6 py-4 transition-all duration-300 border border-white/10 hover:border-white/20"
+                  >
+                    <FaApple size={24} />
+                    <span className="font-bold tracking-wide">Listen on Apple Music</span>
+                  </a>
+                </div>
+              </motion.div>
+            </motion.div>
+
             {/* EP + Social links */}
             <motion.div
               variants={staggerContainer}
