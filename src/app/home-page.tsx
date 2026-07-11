@@ -37,6 +37,34 @@ export default function Home() {
 
   const titleWords = ["YOUNG", "MAN", "WINTER"];
 
+  const singles = [
+    {
+      title: "Ghost",
+      art: "/ghost.png",
+      spotify:
+        "https://open.spotify.com/album/20qbjQvnxqpnzt51vecTBo?si=cGVqVu5WSouVuMdTi6ePJw",
+      apple: "https://music.apple.com/us/album/ghost-single/6787919275",
+      label: "New Single — Out Now",
+    },
+    {
+      title: "Around the Dial",
+      art: "/around-the-dial.png",
+      spotify:
+        "https://open.spotify.com/track/1jkSSKGWXKh7mwyKVsT3Be?si=d775dcdbbf7547d2",
+      apple:
+        "https://music.apple.com/us/album/around-the-dial/6779213799?i=6779213800",
+      label: "Single",
+    },
+    {
+      title: "Crabapple",
+      art: "/crabapple.png",
+      spotify:
+        "https://open.spotify.com/album/3LjgX2uSzdyuJ3GSChJNUm?si=wtLNIOj4TlGPsZ58F5Kk3g",
+      apple: "https://music.apple.com/us/album/crabapple-single/1856140622",
+      label: "Single",
+    },
+  ];
+
   return (
     <>
       <div className="relative min-h-screen bg-black overflow-hidden">
@@ -116,53 +144,58 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Latest Single */}
-            <motion.div
-              variants={staggerContainer}
-              className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24 max-w-4xl mx-auto"
-            >
+            {/* Singles */}
+            {singles.map((single) => (
               <motion.div
-                variants={fadeIn}
-                className="group relative overflow-hidden rounded-xl"
+                key={single.title}
+                variants={staggerContainer}
+                className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24 max-w-4xl mx-auto"
               >
-                <h2 className="text-yellow-400/90 text-xl font-bold mb-5 text-center uppercase tracking-[0.2em]">
-                  New Single — Out Now
-                </h2>
-                <div className="relative transform transition-transform duration-700 group-hover:scale-[1.03]">
-                  <div className="absolute -inset-1 bg-gradient-to-b from-yellow-500/10 via-transparent to-blue-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
-                  <Image
-                    src="/crabapple.png"
-                    width={400}
-                    height={400}
-                    alt="Crabapple - Latest Single"
-                    className="relative rounded-xl shadow-2xl"
-                  />
-                </div>
-              </motion.div>
+                <motion.div
+                  variants={fadeIn}
+                  className="group relative overflow-hidden rounded-xl"
+                >
+                  <h2 className="text-yellow-400/90 text-xl font-bold mb-5 text-center uppercase tracking-[0.2em]">
+                    {single.label}
+                  </h2>
+                  <div className="relative transform transition-transform duration-700 group-hover:scale-[1.03]">
+                    <div className="absolute -inset-1 bg-gradient-to-b from-yellow-500/10 via-transparent to-blue-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+                    <Image
+                      src={single.art}
+                      width={400}
+                      height={400}
+                      alt={`${single.title} - Single`}
+                      className="relative rounded-xl shadow-2xl"
+                    />
+                  </div>
+                </motion.div>
 
-              <motion.div
-                variants={fadeIn}
-                className="flex flex-col justify-center items-center gap-6"
-              >
-                <h3 className="text-white text-3xl font-bold tracking-tight">Crabapple</h3>
-                <div className="flex flex-col gap-4 w-full max-w-xs">
-                  <a
-                    href="https://open.spotify.com/album/3LjgX2uSzdyuJ3GSChJNUm?si=wtLNIOj4TlGPsZ58F5Kk3g"
-                    className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white rounded-xl px-6 py-4 transition-all duration-300 border border-white/10 hover:border-white/20"
-                  >
-                    <FaSpotify size={24} className="text-green-400" />
-                    <span className="font-bold tracking-wide">Listen on Spotify</span>
-                  </a>
-                  <a
-                    href="https://music.apple.com/us/album/crabapple-single/1856140622"
-                    className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white rounded-xl px-6 py-4 transition-all duration-300 border border-white/10 hover:border-white/20"
-                  >
-                    <FaApple size={24} />
-                    <span className="font-bold tracking-wide">Listen on Apple Music</span>
-                  </a>
-                </div>
+                <motion.div
+                  variants={fadeIn}
+                  className="flex flex-col justify-center items-center gap-6"
+                >
+                  <h3 className="text-white text-3xl font-bold tracking-tight">
+                    {single.title}
+                  </h3>
+                  <div className="flex flex-col gap-4 w-full max-w-xs">
+                    <a
+                      href={single.spotify}
+                      className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white rounded-xl px-6 py-4 transition-all duration-300 border border-white/10 hover:border-white/20"
+                    >
+                      <FaSpotify size={24} className="text-green-400" />
+                      <span className="font-bold tracking-wide">Listen on Spotify</span>
+                    </a>
+                    <a
+                      href={single.apple}
+                      className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white rounded-xl px-6 py-4 transition-all duration-300 border border-white/10 hover:border-white/20"
+                    >
+                      <FaApple size={24} />
+                      <span className="font-bold tracking-wide">Listen on Apple Music</span>
+                    </a>
+                  </div>
+                </motion.div>
               </motion.div>
-            </motion.div>
+            ))}
 
             {/* EP + Social links */}
             <motion.div
@@ -349,6 +382,49 @@ export default function Home() {
                   style={{ border: 0 }}
                 ></iframe>
               </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Booking & Contact */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="container max-w-5xl mx-auto p-10 rounded-2xl my-16 relative text-center"
+            style={{
+              background: "linear-gradient(135deg, rgba(251,191,36,0.06) 0%, rgba(59,130,246,0.08) 50%, rgba(0,0,0,0.4) 100%)",
+              border: "1px solid rgba(255,255,255,0.06)",
+              boxShadow: "0 0 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)",
+            }}
+          >
+            <h2 className="section-heading text-5xl text-center font-bold pb-6 text-white mx-auto block w-fit">
+              Booking &amp; Contact
+            </h2>
+            <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">
+              Want Young Man Winter at your venue, festival, or event? Get in
+              touch — we&apos;d love to hear from you.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <a
+                href="mailto:youngmanwintermusic@gmail.com"
+                className="flex items-center justify-center gap-3 bg-yellow-400/10 hover:bg-yellow-400/20 text-yellow-400 rounded-xl px-8 py-4 transition-all duration-300 border border-yellow-400/20 hover:border-yellow-400/40 font-bold tracking-wide"
+              >
+                youngmanwintermusic@gmail.com
+              </a>
+              <a
+                href="https://www.instagram.com/youngmanwintermusic/"
+                className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white rounded-xl px-8 py-4 transition-all duration-300 border border-white/10 hover:border-white/20 font-bold tracking-wide"
+              >
+                <FaInstagram size={22} />
+                DM us on Instagram
+              </a>
+              <a
+                href="https://linktr.ee/youngmanwinter"
+                className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white rounded-xl px-8 py-4 transition-all duration-300 border border-white/10 hover:border-white/20 font-bold tracking-wide"
+              >
+                All our links
+              </a>
             </div>
           </motion.div>
 
