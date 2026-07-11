@@ -401,11 +401,7 @@ export default function Home() {
             <h2 className="section-heading text-5xl text-center font-bold pb-6 text-white mx-auto block w-fit">
               Booking &amp; Contact
             </h2>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">
-              Want Young Man Winter at your venue, festival, or event? Get in
-              touch — we&apos;d love to hear from you.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
               <a
                 href="mailto:youngmanwintermusic@gmail.com"
                 className="flex items-center justify-center gap-3 bg-yellow-400/10 hover:bg-yellow-400/20 text-yellow-400 rounded-xl px-8 py-4 transition-all duration-300 border border-yellow-400/20 hover:border-yellow-400/40 font-bold tracking-wide"
