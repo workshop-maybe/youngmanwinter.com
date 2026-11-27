@@ -39,12 +39,20 @@ export default function Home() {
 
   const singles = [
     {
+      title: "Get Home",
+      art: "/get-home.png",
+      spotify:
+        "https://open.spotify.com/album/7s8KtXVwvslYz04fmwGHMJ?si=QO-FoP2uRk-uYWatYc3MkQ",
+      apple: "https://music.apple.com/us/album/get-home-ep/6808438882",
+      label: "New EP · Out Now",
+    },
+    {
       title: "Ghost",
       art: "/ghost.png",
       spotify:
         "https://open.spotify.com/album/20qbjQvnxqpnzt51vecTBo?si=cGVqVu5WSouVuMdTi6ePJw",
       apple: "https://music.apple.com/us/album/ghost-single/6787919275",
-      label: "New Single — Out Now",
+      label: "Single",
     },
     {
       title: "Around the Dial",
@@ -164,7 +172,7 @@ export default function Home() {
                       src={single.art}
                       width={400}
                       height={400}
-                      alt={`${single.title} - Single`}
+                      alt={`${single.title} cover art`}
                       className="relative rounded-xl shadow-2xl"
                     />
                   </div>
